@@ -27,4 +27,21 @@ app.post('/contestants', async (req, res) => {
     }
 });
 
+app.get('/contestants', async (req, res) => {
+    const { sortedByName } = req.query;
+    let contestants;
+
+    if (sortedByName === 'true') {
+        contestants = await Contestant.find().sort('contestantName');
+    } else {
+        contestants = await Contestant.find();
+    }
+
+    const response = contestants.map(c => ({
+        contestantName: c.contestantName,
+        husbandName: c.husbandName,
+    }));
+    res.json({ pairs:response});
+});
+
 
