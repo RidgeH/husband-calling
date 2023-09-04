@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express();
-const Contestant = require('./models:Contestant');
+const Contestant = require('./ContestantAbstraction.js');
 
 mongoose.connect('mongodb://localhost:27017/husbandCalling', {
     useNewUrlParser: true,
