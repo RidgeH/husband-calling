@@ -1,0 +1,1 @@
+ I assumed incoming requests would send data in JSON format and that I should respond with JSON-formatted data. 
