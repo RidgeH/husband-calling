@@ -13,6 +13,7 @@ Feel free to talk a bit about the "harder" routes that you have worked on and ho
 For me in coding, and honestly a lot of aspects of my life, I always have a hard time starting (maybe this is why I procrastinate so much). But in this instance I wasn't being lazy, it just took me deliberating for a couple hours to decide what libraries and frameworks to use. I started off basic with the http module in Node, but quickly leaned towards Express. Once I figured out to use mongoose.Schema as my data structure as well as parsing throught the json requests neatly using express.json(), the rest of the project came a lot easier to me. 
 
 How did you decide on certain response codes or errors?
+
 Errors should be as descriptive as possible to let users understand what went wrong. As such, I utilized 5 status codes throughout my methods for different scenarios. 
 201: To indicate that a request has succeeded, I used this code when I was registering contestants to indicate when a new contestant has successfully been added to the database. 
 400: To indicate that there is something wrong with the client's request. In this project, I utilized it when there is an issue registering a contestant (maybe the syntax is wrong, or a required field is missing) or when the vocal range is less than the location. 
